@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Bisdit</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> 
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="style.css">
+     <style>
+			.carousel-open:checked + .carousel-item {
+				position: static;
+				opacity: 100;
+			}
+			.carousel-item {
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+			#carousel-1:checked ~ .control-1,
+			#carousel-2:checked ~ .control-2,
+			#carousel-3:checked ~ .control-3 {
+				display: block;
+			}
+			.carousel-indicators {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+			}
+			#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+				color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+			}
+		</style>
+    
+    
+</head>
+<body>
+
+    <div class="header-2">
+
+        <nav class="bg-green-800 py-2 md:py-4">
+            <div class="container px-4 mx-auto md:flex md:items-center">
+               
+
+                <div class="hidden md:flex flex-col md:flex-row md:mr-auto mt-3 md:mt-0" id="navbar-collapse">
+                    <a href="#" class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Beranda</a>
+                    <a href="#" class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Pilih Tanaman</a>
+                    <a href="#" class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Alat Berkebun</a>
+                    <a href="#" class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Koleksi Saya</a>
+                    <a href="#" class="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Progress Saya</a>
+                    
+                </div>
+            </div>
+        </nav>
+
+        <div class="bg-yellow-600 py-96 md:py-12">
+            <div class="container px-4 mx-auto">
+
+                <div class="text-center max-w-2xl mx-auto">
+                    <h1 class="text-3xl text-white md:text-2xl font-medium mb-2">TEMUKAN TANAMAN TERBAIK YANG KAMU INGINKAN</h1>
+                    <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors duration-150 bg-green-800 rounded-lg focus:shadow-outline hover:bg-black" href="cari.html">CARI SEKARANG</a>
+                    <div class="mt-4">
+                        <img src="" class="d-block max-w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--tanaman terlaris-->    
+    <div class="py-8 px-16">
+        <h1 class="text-3xl text-center text-green-800 md:text-3xl font-medium mb-2">Telusuri Tanaman Terlaris per Kategori</h1>
+
+        
+<div class="carousel relative shadow-2xl bg-white">
+	<div class="carousel-inner relative overflow-hidden w-full">
+	  <!--Slide 1-->
+		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+		<div class="carousel-item absolute opacity-0" style="height:50vh;">
+			<div class="block h-full w-full  text-black text-2xl text-center">Tanaman Hias Outdoor</div>
+		</div>
+		<label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+		
+		<!--Slide 2-->
+		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:50vh;">
+			<div class="block h-full w-full text-black text-2xl text-center">Tanaman Gantung</div>
+		</div>
+		<label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+		
+		<!--Slide 3-->
+		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:50vh;">
+			<div class="block h-full w-full text-black text-2xl text-center">Tanaman Sukulen</div>
+		</div>
+		<label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+		<!-- Add additional indicators for each slide-->
+		<ol class="carousel-indicators">
+			<li class="inline-block mr-3">
+				<label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+		</ol>
+		
+	</div>
+</div>
+<!-- telusuri alat berkebun-->
+<div class="py-8 px-16">
+    <h1 class="text-3xl text-center text-green-800 md:text-3xl font-medium mb-2">Telusuri Alat Berkebun</h1>
+    <div class="grid grid-cols-1 justify-items-center">
+        <div>
+            <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors bg-green-800 rounded-lg hover:bg-black" href="pupuk.html">PUPUK</a>
+        </div>
+        <div>
+            <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors bg-green-800 rounded-lg  hover:bg-black" href="pot.html">POT</a>
+        </div>
+        <div>
+            <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors  bg-green-800 rounded-lg hover:bg-black" href="media.html">MEDIA TANAM</a>
+        </div>
+        <div>
+            <a class="inline-flex items-center h-8 px-4 m-2 text-sm text-white transition-colors  bg-green-800 rounded-lg hover:bg-black" href="alat.html">ALAT ALAT</a>
+        </div>
+    </div>
+</div>
+
+<!-- telusuri mitra-->
+<div class="py-8 px-16">
+    <h1 class="text-3xl text-center text-green-800 md:text-3xl font-medium mb-2">Telusuri UMKM Berkebun di Surabaya</h1>
+    <div class="grid grid-col-2 justify-items-center">
+        <div>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-6/12 sm:w-4/12 px-4 py-6">
+                    <a href="alat.html">
+                        <img src="img/plantsraw.jpg" alt="..." class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                    </a>
+                </div>
+              </div>
+        </div>
+        <div>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-6/12 sm:w-4/12 px-4 py-6">
+                    <a href="cari.html">
+                        <img src="img/lombokorchid.jpg" alt="..." class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                    </a>
+                </div>
+              </div>
+        </div>
+        <div>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-6/12 sm:w-4/12 px-4 py-6">
+                    <a href="cari.html">
+                        <img src="img/mitraflora.jpg" alt="..." class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                    </a>
+                </div>
+              </div>
+        </div>
+        <div>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-6/12 sm:w-4/12 px-4 py-6">
+                    <a href="cari.html">
+                        <img src="img/tamanku.jpg" alt="..." class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                    </a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+    </div>
+</div>
+
+
+    
+           
+
+   
+    <!-- /.header-2 -->
+
+    <!-- Scripts -->
+    <script>
+        let toggleBtn = document.querySelector("#navbar-toggle");
+        let collapse = document.querySelector("#navbar-collapse");
+
+        toggleBtn.onclick = () => {
+            collapse.classList.toggle("hidden");
+            collapse.classList.toggle("flex");
+        };
+    </script>
+</body>
+</html>
